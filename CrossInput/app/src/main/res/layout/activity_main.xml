@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ECF0F3"
+    tools:context="com.bunny.CrossInput.MainActivity">
+
+    <TextView
+        android:id="@+id/serverIP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/wifi_off"
+        android:gravity="center"
+        android:textColor="#1850F8"
+        android:textSize="13sp"
+        android:text="请先扫码连接到电脑"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textColor="#287EFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <TextView
+        android:id="@+id/explain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="●免责声明●"
+        android:background="#FF0000"
+        android:textColor="#0073FF"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.085" />
+
+    <com.bunny.CrossInput.flatdesign.sshadkany.RectButton
+        android:id="@+id/scanBtn"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0"
+        app:shape_roundRect_backgroundColor="#ECF0F3"
+        app:shape_roundRect_bottomLeftRadius="10dp"
+        app:shape_roundRect_bottomRightRadius="10dp"
+        app:shape_roundRect_topLeftRadius="10dp"
+        app:shape_roundRect_topRightRadius="10dp">
+
+        <ImageView
+            android:id="@+id/scanBtnImg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="40dp"
+            android:src="@mipmap/scan"
+            app:tint="#2F63FF" />
+
+    </com.bunny.CrossInput.flatdesign.sshadkany.RectButton>
+
+    <com.bunny.CrossInput.flatdesign.sshadkany.RectButton
+        android:id="@+id/moreBtn"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0"
+        app:shape_roundRect_backgroundColor="#ECF0F3"
+        app:shape_roundRect_bottomLeftRadius="10dp"
+        app:shape_roundRect_bottomRightRadius="10dp"
+        app:shape_roundRect_topLeftRadius="10dp"
+        app:shape_roundRect_topRightRadius="10dp">
+
+        <ImageView
+            android:id="@+id/moreBtnImg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="40dp"
+            android:src="@mipmap/more"
+            app:tint="#0B48FF" />
+
+    </com.bunny.CrossInput.flatdesign.sshadkany.RectButton>
+
+    <com.bunny.CrossInput.flatdesign.sshadkany.shapes.RoundRectView
+        android:id="@+id/textBox"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.19"
+        app:shape_roundRect_bottomLeftRadius="10dp"
+        app:shape_roundRect_bottomRightRadius="10dp"
+        app:shape_roundRect_shadow_type="small_inner_shadow"
+        app:shape_roundRect_topLeftRadius="10dp"
+        app:shape_roundRect_topRightRadius="10dp">
+
+        <com.bunny.CrossInput.flatdesign.sshadkany.shapes.RoundRectView
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:layout_margin="8dp"
+            app:shape_roundRect_backgroundColor="#ECF0F3"
+            app:shape_roundRect_bottomLeftRadius="12dp"
+            app:shape_roundRect_bottomRightRadius="12dp"
+            app:shape_roundRect_shadow_type="drop_shadow"
+            app:shape_roundRect_topLeftRadius="12dp"
+            app:shape_roundRect_topRightRadius="12dp">
+
+            <EditText
+                android:id="@+id/etText"
+                android:layout_width="match_parent"
+                android:layout_height="174dp"
+                android:layout_margin="35dp"
+                android:hint="请输入文本"
+                android:textColor="#418DFF"
+                android:textSize="18sp"
+                android:textColorHint="#9C9A9A" />
+
+        </com.bunny.CrossInput.flatdesign.sshadkany.shapes.RoundRectView>
+    </com.bunny.CrossInput.flatdesign.sshadkany.shapes.RoundRectView>
+
+    <com.bunny.CrossInput.flatdesign.sshadkany.RectButton
+        android:id="@+id/clear"
+        android:layout_width="170dp"
+        android:layout_height="130dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0455"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.455"
+        app:shape_roundRect_backgroundColor="#ECF0F3"
+        app:shape_roundRect_bottomLeftRadius="100dp"
+        app:shape_roundRect_bottomRightRadius="100dp"
+        app:shape_roundRect_topLeftRadius="100dp"
+        app:shape_roundRect_topRightRadius="100dp">
+
+        <ImageView
+            android:id="@+id/clearTextBtnImg"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:padding="20dp"
+            android:src="@mipmap/clear_edit"
+            app:tint="#11A84E" />
+
+    </com.bunny.CrossInput.flatdesign.sshadkany.RectButton>
+
+    <com.bunny.CrossInput.flatdesign.sshadkany.RectButton
+        android:id="@+id/del"
+        android:layout_width="170dp"
+        android:layout_height="130dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9545"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.455"
+        app:shape_roundRect_backgroundColor="#ECF0F3"
+        app:shape_roundRect_bottomLeftRadius="100dp"
+        app:shape_roundRect_bottomRightRadius="100dp"
+        app:shape_roundRect_topLeftRadius="100dp"
+        app:shape_roundRect_topRightRadius="100dp">
+
+        <ImageView
+            android:id="@+id/delBtnImg"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_gravity="center"
+            android:padding="20dp"
+            android:src="@mipmap/backspace"
+            app:tint="#1D1DFF" />
+
+    </com.bunny.CrossInput.flatdesign.sshadkany.RectButton>
+
+    <com.bunny.CrossInput.flatdesign.sshadkany.RectButton
+        android:id="@+id/up"
+        android:layout_width="120dp"
+        android:layout_height="160dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.60"
+        app:shape_roundRect_backgroundColor="#ECF0F3"
+        app:shape_roundRect_bottomLeftRadius="100dp"
+        app:shape_roundRect_bottomRightRadius="100dp"
+        app:shape_roundRect_topLeftRadius="100dp"
+        app:shape_roundRect_topRightRadius="100dp">
+
+        <ImageView
+            android:id="@+id/upBtnImg"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_gravity="center"
+            android:padding="22dp"
+            android:src="@mipmap/up"
+            app:tint="#1D1DFF" />
+
+    </com.bunny.CrossInput.flatdesign.sshadkany.RectButton>
+
+    <com.bunny.CrossInput.flatdesign.sshadkany.RectButton
+        android:id="@+id/down"
+        android:layout_width="120dp"
+        android:layout_height="160dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.86"
+        app:shape_roundRect_backgroundColor="#ECF0F3"
+        app:shape_roundRect_bottomLeftRadius="100dp"
+        app:shape_roundRect_bottomRightRadius="100dp"
+        app:shape_roundRect_topLeftRadius="100dp"
+        app:shape_roundRect_topRightRadius="100dp">
+
+        <ImageView
+            android:id="@+id/dowBtnImg"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_gravity="center"
+            android:padding="22dp"
+            android:src="@mipmap/down"
+            app:tint="#1D1DFF" />
+
+    </com.bunny.CrossInput.flatdesign.sshadkany.RectButton>
+
+    <com.bunny.CrossInput.flatdesign.sshadkany.RectButton
+        android:id="@+id/left"
+        android:layout_width="160dp"
+        android:layout_height="120dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.70"
+        app:shape_roundRect_backgroundColor="#ECF0F3"
+        app:shape_roundRect_bottomLeftRadius="100dp"
+        app:shape_roundRect_bottomRightRadius="100dp"
+        app:shape_roundRect_topLeftRadius="100dp"
+        app:shape_roundRect_topRightRadius="100dp">
+
+        <ImageView
+            android:id="@+id/leftBtnImg"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_gravity="center"
+            android:padding="22dp"
+            android:src="@mipmap/left"
+            app:tint="#1D1DFF" />
+
+    </com.bunny.CrossInput.flatdesign.sshadkany.RectButton>
+
+    <com.bunny.CrossInput.flatdesign.sshadkany.RectButton
+        android:id="@+id/right"
+        android:layout_width="160dp"
+        android:layout_height="120dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.70"
+        app:shape_roundRect_backgroundColor="#ECF0F3"
+        app:shape_roundRect_bottomLeftRadius="100dp"
+        app:shape_roundRect_bottomRightRadius="100dp"
+        app:shape_roundRect_topLeftRadius="100dp"
+        app:shape_roundRect_topRightRadius="100dp">
+
+        <ImageView
+            android:id="@+id/rightBtnImg"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_gravity="center"
+            android:padding="22dp"
+            android:src="@mipmap/right"
+            app:tint="#1D1DFF" />
+
+    </com.bunny.CrossInput.flatdesign.sshadkany.RectButton>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

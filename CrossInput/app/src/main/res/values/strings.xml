@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">跨屏输入</string>
+    <string name="SaveData">ConfigData</string>
+    <string name="APP_description">跨屏输入是一款支持在安卓和Windows两个平台之间，传输文字文本的打字辅助软件</string>
+</resources>
