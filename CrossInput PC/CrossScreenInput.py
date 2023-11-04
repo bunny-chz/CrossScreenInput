@@ -7,7 +7,6 @@ import pyautogui
 import threading
 import socket
 import pyperclip
-import requests
 
 
 server = Flask(__name__)
