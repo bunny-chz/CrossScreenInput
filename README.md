@@ -1,6 +1,8 @@
 # CrossScreenInput
 跨屏输入电脑端和手机端源码
 
+跨屏输入是一款可以传输文字文本的打字辅助软件，支持任何设备对Windows电脑的文本输入，开发的目的是帮助不会电脑打字的人。
+
 抖音视频效果演示:
 
 https://v.douyin.com/iJYstmwc/
