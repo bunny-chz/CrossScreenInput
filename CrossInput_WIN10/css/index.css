@@ -1,0 +1,313 @@
+body {
+    font-family: sans-serif; 
+	  background: var(--color-body);
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+.operation_ui {
+    margin: auto; 
+    background: var(--color-operation_ui);
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 5px;
+}
+
+.input_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.input[type = "text"] {
+    height: 120px;
+    resize: vertical;
+    overflow: auto;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    background: linear-gradient(142.99deg, rgba(235, 233, 233, 0.9) 15.53%, rgba(236, 236, 236, 0.9) 88.19%);
+    box-shadow: 0px 12px 24px -1px rgba(0, 0, 0,0.18);
+    border-color: rgba(7, 4, 14, 0);
+    border-radius: 12px;
+    margin: 7px auto;
+    padding: 12px 12px;
+    outline: none;
+    text-align: left;
+    transition: 0.5s;
+    margin-top: 18px;
+  }
+  
+  .input[type = "text"]:hover {
+    width: 90%;
+    height: 120px;
+  }
+  
+  .input[type = "text"]:focus {
+    width: 90%;
+    height: 120px;
+  }
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+.btn {
+  display: grid;
+  place-items: center;
+  background: var(--color-btn_bg);
+  padding: 1.4em;
+  border-radius: 10px;
+  box-shadow: 6px 6px 10px -1px var(--color-btn_up),
+        -6px -6px 10px -1px var(--color-btn_down);
+  border: 1px solid var(--color-btn_border);
+  cursor: pointer;
+  transition: transform 0.5s;
+  margin-bottom: 10px;
+}
+  
+.btn:active {
+  box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+        inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+        -0.5px -0.5px 0px rgba(255,255,255,1),
+        0.5px 0.5px 0px rgba(0,0,0,0.15),
+        0px 12px 10px -10px rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.1);
+  transform: translateY(0.5em);
+}
+
+.btn svg {
+    width: 100%;
+    height: 100%;
+}
+
+.btn_explain_tip:hover {
+  transform: translateY(-0.1em);
+}
+
+.btn_explain_tip:active {
+  transform: translateY(0.2em);
+}
+
+.button_center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+.button_container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+.button_left {
+    flex-wrap: wrap;
+    justify-content: left;
+    margin-left: 10px;
+  }
+
+.button_right {
+    flex-wrap: wrap;
+    justify-content: right;
+    margin-right: 10px;
+  }
+
+@media(min-width: 1440px){
+    .operation_ui {
+        width: 33%;
+    }
+    .input[type = "text"] {
+      width: 40%;
+    }
+    .input[type = "text"]:hover {
+      width: 42%;
+    }
+    .input[type = "text"]:focus {
+        width: 42%;
+    }
+}
+
+@media(max-width: 1440px){
+    .operation_ui {
+        width: 33%;
+    }
+    .input[type = "text"] {
+      width: 40%;
+    }
+    .input[type = "text"]:hover {
+      width: 42%;
+    }
+    .input[type = "text"]:focus {
+        width: 42%;
+    }
+}
+@media(max-width: 1280px){
+    .operation_ui {
+        width: 36%;
+    }
+    .input[type = "text"] {
+      width: 40%;
+    }
+    .input[type = "text"]:hover {
+      width: 42%;
+    }
+    .input[type = "text"]:focus {
+        width: 42%;
+    }
+}
+@media(max-width: 1080px){
+    .operation_ui {
+        width: 37%;
+    }
+    .input[type = "text"] {
+      width: 41%;
+    }
+    .input[type = "text"]:hover {
+      width: 43%;
+    }
+    .input[type = "text"]:focus {
+        width: 43%;
+    }
+}
+@media(max-width: 1050px){
+    .operation_ui {
+        width: 38%;
+    }
+    .input[type = "text"] {
+      width: 42%;
+    }
+    .input[type = "text"]:hover {
+      width: 44%;
+    }
+    .input[type = "text"]:focus {
+        width: 44%;
+    }
+}
+@media(max-width: 1024px){
+    .operation_ui {
+        width: 39%;
+    }
+    .input[type = "text"] {
+      width: 43%;
+    }
+    .input[type = "text"]:hover {
+      width: 45%;
+    }
+    .input[type = "text"]:focus {
+        width: 45%;
+    }
+}
+@media(max-width: 900px){
+    .operation_ui {
+        width: 41%;
+    }
+    .input[type = "text"] {
+      width: 47%;
+    }
+    .input[type = "text"]:hover {
+      width: 49%;
+    }
+    .input[type = "text"]:focus {
+        width: 49%;
+    }
+}
+@media(max-width: 800px){
+    .operation_ui {
+        width: 43%;
+    }
+    .input[type = "text"] {
+      width: 50%;
+    }
+    .input[type = "text"]:hover {
+      width: 52%;
+    }
+    .input[type = "text"]:focus {
+        width: 52%;
+    }
+}
+@media(max-width: 768px){
+    .operation_ui {
+        width: 48%;
+    }
+    .input[type = "text"] {
+      width: 55%;
+    }
+    .input[type = "text"]:hover {
+      width: 57%;
+    }
+    .input[type = "text"]:focus {
+        width: 57%;
+    }
+}
+@media(max-width: 736px){
+    .operation_ui {
+        width: 58%;
+    }
+    .input[type = "text"] {
+      width: 65%;
+    }
+    .input[type = "text"]:hover {
+      width: 67%;
+    }
+    .input[type = "text"]:focus {
+        width: 67%;
+    }
+}
+@media(max-width: 600px){
+    .operation_ui {
+        width: 63%;
+    }
+    .input[type = "text"] {
+      width: 70%;
+    }
+    .input[type = "text"]:hover {
+      width: 72%;
+    }
+    .input[type = "text"]:focus {
+        width: 72%;
+    }
+}
+@media(max-width: 568px){
+    .operation_ui {
+        width: 68%;
+  }
+  .input[type = "text"] {
+    width: 75%;
+  }
+  .input[type = "text"]:hover {
+    width: 77%;
+  }
+  .input[type = "text"]:focus {
+      width: 77%;
+  }
+}
+@media(max-width: 480px){
+  .operation_ui {
+      width: 85%;
+  }
+  .input[type = "text"] {
+      width: 85%;
+  }
+  .input[type = "text"]:hover {
+    width: 87%;
+  }
+  .input[type = "text"]:focus {
+      width: 87%;
+  }
+}
+@media(max-width: 320px){
+    .operation_ui {
+        width: 90%;
+    }
+    .input[type = "text"] {
+        width: 88%;
+    }
+    .input[type = "text"]:hover {
+      width: 90%;
+    }
+    .input[type = "text"]:focus {
+        width: 90%;
+    }
+}

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>跨屏输入</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="css/index.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/sider_menu.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+
+<body>
+	<div class="menu">
+		<svg viewBox="0 0 1024 1024" width="30" height="30">
+			<path class="menu_btn_icon" d="M79.169331 113.350554l121.006899 0 0 120.557773-121.006899 0 0-120.557773ZM324.965581 113.350554l647.967334 0 0 120.557773-647.967334 0 0-120.557773ZM79.169331 444.549837l121.006899 0 0 120.557773-121.006899 0 0-120.557773ZM324.965581 444.549837l647.967334 0 0 120.557773-647.967334 0 0-120.557773ZM79.169331 754.840781l121.006899 0 0 120.334643-121.006899 0 0-120.334643ZM324.965581 754.840781l647.967334 0 0 120.334643-647.967334 0 0-120.334643Z"></path>
+		</svg>
+		<svg viewBox="0 0 1024 1024" width="30" height="30" style="display: none;">
+			<path class="menu_btn_icon" d="M1022.583467 127.803733 894.779733 0 511.291733 383.4624 127.8464 0 0 127.803733 383.496533 511.274667 0 894.737067 127.8464 1022.5408 511.291733 639.0784 894.779733 1022.5408 1022.583467 894.737067 639.138133 511.274667Z"></path>
+		</svg>
+    </div>
+
+    <div class="barra-lateral">
+        <div>
+            <div class="nombre-pagina">
+                <img src="images/app_icon.png" width="40px" height="40px"></img>
+                <span>跨屏输入</span>
+            </div>
+        </div>
+
+		<div>
+            <div class="modo-oscuro">
+                <div class="info">
+                    <span>夜间模式</span>
+                </div>
+                <div class="switch">
+                    <div class="base">
+                        <div class="circulo">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+			<div class="linea"></div>
+        </div>
+
+        <nav class="navegacion">
+            <ul>
+                <li>
+                    <a id="inbox" href="webui.html">
+						<svg viewBox="0 0 1024 1024" width="30" height="30">
+							<path d="M939.175079 484.343103 557.721321 107.755166c-1.927909-2.289136-5.950526-6.025227-11.568477-9.730619-10.06217-6.627954-20.757766-10.001795-31.783891-10.001795-11.855002 0-22.820752 3.40454-32.597419 10.092869-6.477528 4.458545-9.942443 8.465812-11.4334 10.454096L89.606831 484.373803c-6.522554 6.417153-10.107195 14.973016-10.107195 24.071232 0 9.06854 3.584642 17.624403 10.107195 24.041556 11.990079 11.900028 29.494755 8.495488 46.169529-7.92346l25.592888-25.306362 41.892109-40.08495 0 389.497968c0 48.143487 39.617299 87.308485 88.317465 87.308485l148.993382 0L440.572204 687.670975c0-19.160385 15.84692-34.736129 35.30918-34.736129l77.020164 0c19.47761 0 35.293831 15.575744 35.293831 34.736129l0 248.307296 149.008732 0c48.685839 0 88.332814-39.164998 88.332814-87.308485L825.536926 461.189777l67.484997 66.355267c11.508102 7.531534 21.842471 11.538801 30.217209 11.538801 6.236028 0 11.44875-2.169409 15.936971-6.598278 6.507204-6.417153 10.092869-14.94334 10.122545-24.041556C949.297624 499.346819 945.712983 490.789932 939.175079 484.343103z" fill="#05a7fb"></path>
+						</svg>
+                        <span>主界面</span>
+                    </a>
+                </li>
+                <li>
+                    <a id="inbox" href="about.html">
+						<svg viewBox="0 0 1024 1024" width="30" height="30">
+							<path d="M818.217 770.13c25.597-30.29 46.422-64.031 62.111-100.694 21.328-49.84 32.143-102.809 32.143-157.436 0-54.047-10.594-106.497-31.486-155.893-20.172-47.692-49.042-90.516-85.809-127.283s-79.591-65.637-127.283-85.809C618.497 122.123 566.047 111.529 512 111.529s-106.497 10.594-155.893 31.486c-47.692 20.172-90.517 49.042-127.283 85.809s-65.637 79.591-85.809 127.283C122.123 405.503 111.529 457.953 111.529 512s10.594 106.497 31.486 155.893c20.172 47.692 49.042 90.516 85.809 127.283 36.767 36.767 79.591 65.637 127.283 85.809 49.396 20.893 101.846 31.486 155.893 31.486h359.231a37.001 37.001 0 0 0 26.163-63.163l-79.177-79.178zM485.504 323.186l35.882-12c19.376-6.481 40.344 3.975 46.825 23.354 6.48 19.379-3.976 40.344-23.354 46.825l-35.882 12a36.96 36.96 0 0 1-11.74 1.92c-15.478 0-29.905-9.788-35.085-25.275-6.481-19.378 3.975-40.343 23.354-46.824z m86.615 149.795l-33.082 148.09c12.283 1.718 23.42 9.571 28.779 21.758 8.227 18.706-0.269 40.539-18.975 48.765l-45.479 20a36.974 36.974 0 0 1-14.889 3.131 37.003 37.003 0 0 1-36.116-45.067l33.023-147.827c-13.507-0.965-25.984-9.336-31.546-22.69-7.857-18.864 1.065-40.525 19.929-48.382l48.018-20a37 37 0 0 1 50.338 42.222z" fill="#0572f9"></path>
+						</svg>
+                        <span>关于</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+		<div class="usuario">
+			<img src="images/app_icon.png" alt="">
+			<div class="info-usuario">
+				<div class="nombre-email">
+					<span class="nombre"> 2023 © Bunny</span>
+					<span class="email">Version 2.0.0</span>
+				</div>
+				<ion-icon name="ellipsis-vertical-outline"></ion-icon>
+			</div>
+		</div>
+    </div>
+
+	<div class="input_container" style="margin-top: 1px;">
+		<div class="input"  style="background: rgba(149, 255, 29, 0.7);">
+			<p style="font-size: 12px;">已连接电脑端 IP：<span id="ip" style="color: rgb(24, 80, 248);"></span> 端口：<span id="port" style="color: rgb(241, 48, 54);"></span></p>
+		</div>
+	</div>
+	<div class="input_container" style="margin-top: 10px;">
+		<div  class="btn_explain_tip" style="background: rgb(222, 8, 8);">
+			<p style="font-size: 15px;" onclick="explain_tip()">●免责声明●</p>
+		</div>
+	</div>
+	<div class="input_container">
+		<textarea placeholder="请输入文字" class="input  no-scrollbar" id="textBox" name="text" type="text" rows="3"></textarea>
+	</div>
+	
+	<div class="operation_ui">
+		<div class="button_container">
+			<button class="button_left btn" onclick="clearInput()">
+				<svg viewBox="0 0 1024 1024" width="40" height="40">
+					<path d="M1024 1024H26.25641a26.25641 26.25641 0 1 1 0-52.512821h997.74359a26.25641 26.25641 0 0 1 0 52.512821zM630.153846 887.466667l-21.005128 31.507692H262.564103l-180.434052-155.017846L36.758974 729.928205l31.507693-42.010256L503.020308 12.077949l36.023795-8.086975L966.235897 288.820513l45.42359 30.299897-30.877538 42.482872zM532.795077 63.015385l-422.203077 656.410256L262.564103 867.774359V866.461538h318.542769l355.98441-534.002871z" fill="#484D55" p-id="3263"></path><path d="M525.128205 26.25641l472.615385 262.564103-210.051282 315.076923-472.615385-262.564103z" fill="#11A84E"></path>
+				</svg>
+			</button>
+			<button class="button_right btn" onclick="httpRequestFun('del', '', REQUEST_FLAG.GET)">
+				<svg viewBox="0 0 1024 1024" width="40" height="40">
+					<path d="M1152.01 128H410.53A127.94 127.94 0 0 0 320.01 165.5L18.75 466.74c-25 25-25 65.52 0 90.5L320.01 858.5c24 24 56.56 37.5 90.5 37.5H1152.01c70.7 0 128-57.3 128-128V256c0-70.7-57.3-128-128-128z m-169.38 508.12c12.5 12.5 12.5 32.76 0 45.26l-45.24 45.24c-12.5 12.5-32.76 12.5-45.26 0L768.01 602.5l-124.12 124.12c-12.5 12.5-32.76 12.5-45.26 0l-45.24-45.24c-12.5-12.5-12.5-32.76 0-45.26L677.51 512l-124.12-124.12c-12.5-12.5-12.5-32.76 0-45.26l45.24-45.24c12.5-12.5 32.76-12.5 45.26 0L768.01 421.5l124.12-124.12c12.5-12.5 32.76-12.5 45.26 0l45.24 45.24c12.5 12.5 12.5 32.76 0 45.26L858.51 512l124.12 124.12z" fill="#1D1DFF"></path>
+				</svg>
+			</button>
+		</div>
+		<div class="button_center">
+				<button class="btn" onclick="httpRequestFun('up', '', REQUEST_FLAG.GET)">
+					<svg viewBox="0 0 1024 1024" width="40" height="40">
+						<path d="M514 114.3c-219.9 0-398.8 178.9-398.8 398.8 0 220 178.9 398.9 398.8 398.9s398.8-178.9 398.8-398.9c0-219.8-178.9-398.8-398.8-398.8z m208.8 494.5c-11.5 11.5-26.5 17.2-41.5 17.2s-30.1-5.7-41.5-17.2L517.1 486.3 394.6 608.8c-22.9 22.9-60.2 22.9-83.1 0-22.9-22.9-22.9-60.2 0-83.1l164.1-164.1c22.9-22.9 60.2-22.9 83.1 0l164.1 164.1c22.9 23 22.9 60.2 0 83.1z" fill="#1D1DFF"></path>
+					</svg>
+				</button>
+		</div>
+		<div class="button_container">
+			<button class="button_left btn" onclick="httpRequestFun('left', '', REQUEST_FLAG.GET)">
+				<svg viewBox="0 0 1024 1024" width="40" height="40">
+					<path d="M514 114.3c-219.9 0-398.8 178.9-398.8 398.8S294.1 912 514 912s398.9-178.9 398.9-398.8-179-398.9-398.9-398.9z m95.6 518.3c22.9 22.9 22.9 60.2 0 83.1-22.9 22.9-60.2 22.9-83.1 0L362.4 551.6c-22.9-22.9-22.9-60.2 0-83.1l164.1-164.1c22.9-22.9 60.2-22.9 83.1 0 11.5 11.5 17.2 26.5 17.2 41.5s-5.7 30.1-17.2 41.5L487.1 510l122.5 122.6z" fill="#1D1DFF"></path>
+				</svg>
+			</button>
+			<button class="button_right btn" onclick="httpRequestFun('right', '', REQUEST_FLAG.GET)">
+				<svg viewBox="0 0 1024 1024" width="40" height="40">
+					<path d="M514 114.3c-219.9 0-398.8 178.9-398.8 398.8 0 220 178.9 398.9 398.8 398.9s398.8-178.9 398.8-398.9c0-219.8-178.9-398.8-398.8-398.8z m152.9 440.4L502.8 718.8c-22.9 22.9-60.2 22.9-83.1 0-11.5-11.5-17.2-26.5-17.2-41.5s5.7-30.1 17.2-41.5l122.6-122.6-122.6-122.6c-22.9-22.9-22.9-60.2 0-83.1 22.9-22.9 60.2-22.9 83.1 0l164.1 164.1c23 23 23 60.2 0 83.1z" fill="#1D1DFF"></path>
+				</svg>
+			</button>
+		</div>
+		<div class="button_center"> 
+			<button class="btn" onclick="httpRequestFun('down', '', REQUEST_FLAG.GET)">
+				<svg viewBox="0 0 1024 1024" width="40" height="40">
+					<path d="M514 114.3c-219.9 0-398.8 178.9-398.8 398.8 0 220 178.9 398.9 398.8 398.9s398.8-178.9 398.8-398.9c0-219.8-178.9-398.8-398.8-398.8z m205.7 392.2L555.5 670.6c-22.9 22.9-60.2 22.9-83.1 0L308.3 506.5c-22.9-22.9-22.9-60.2 0-83.1 11.5-11.5 26.5-17.2 41.5-17.2s30.1 5.7 41.5 17.2L514 546l122.6-122.6c22.9-22.9 60.2-22.9 83.1 0 22.9 23 22.9 60.2 0 83.1z" fill="#1D1DFF"></path>
+				</svg>
+			</button>
+		</div>
+	</div>
+	<script src="js/script.js"></script>
+	<script>
+		var SERVER_ADDR = "{{ SERVER_ADDR }}"
+		var REQUEST_FLAG = {
+		  GET: 0,
+		  POST: 1,
+		};
+
+		function extractIPAndPort() {
+        	const regex = /\/\/([\d.]+):(\d+)/;
+        	const matches = regex.exec(SERVER_ADDR);
+			
+        	if (matches && matches.length === 3) {
+        	  const ip = matches[1];
+        	  const port = matches[2];
+			
+        	  const ipElement = document.getElementById('ip');
+        	  const portElement = document.getElementById('port');
+			
+        	  ipElement.innerHTML = ip;
+        	  portElement.innerHTML = port;
+        	} else {
+        	  console.log('Invalid URL format');
+        	}
+      	}
+
+		function clearInput() {
+		  var input = document.getElementById("textBox");
+		  input.value = "";
+		}
+
+		function explain_tip() {
+		  alert("本软件请用于日常的学习交流，请勿它用。\n\n" +
+                        "如造成不良影响和损失，开发者不承担任何责任。\n\n" +
+                        "！！软件有时运行不稳定或者网络原因，会出现问题，请务必审核和确认电脑端接收的文本内容！！");
+		}
+	
+		function httpRequestFun(url, text, requestFlag) {
+		  
+		  	var xhttp = new XMLHttpRequest();
+	
+		  	var requestTimeout = 5000;
+			if(url != 'del'){
+		  		var timeoutTimer = setTimeout(function() {
+					if (xhttp.readyState < 4) {
+				  		xhttp.abort();
+				  		alert("跨屏输入提示：请求超时，请检查网络连接，是否在同一个局域网（比如Wi-Fi路由器）内；或者检查跨屏输入软件是否正常运行！");
+					}
+		  		}, requestTimeout);
+			
+		  		xhttp.onreadystatechange = function() {
+					if (this.readyState == 4) {
+					  	clearTimeout(timeoutTimer);
+					  	if (this.status == 200) {
+							console.log("发送成功");
+					  	} else {
+							alert("跨屏输入提示：请求失败，服务器不存在，请检查网络连接，是否在同一个局域网（比如Wi-Fi路由器）内；或者检查跨屏输入软件是否正常运行！");
+					  	}
+					}
+		  		};
+			}
+
+		  	if(requestFlag == REQUEST_FLAG.GET){
+				xhttp.open("GET", SERVER_ADDR + url, true);
+		  	}
+		  	else if(requestFlag == REQUEST_FLAG.POST){
+				xhttp.open("POST", SERVER_ADDR + url + encodeURIComponent(text), true);
+		  	}
+		  	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded;charset=UTF-8");
+		  	xhttp.send();
+		}
+	
+		extractIPAndPort();
+		var inputElement = document.getElementById('textBox');
+		inputElement.addEventListener('input', function(event) {
+		  var currentText = event.target.value;
+		  if (event.inputType === 'insertText') {
+			var addedText = event.data;
+			console.log("Text added: " + addedText);
+			httpRequestFun('add?text=', addedText, REQUEST_FLAG.POST);
+		  }
+		});
+	
+		inputElement.addEventListener('beforeinput', function(event) {
+		  if (event.inputType === 'deleteContentBackward') {
+			console.log('Text deleted');
+			httpRequestFun('del', '', REQUEST_FLAG.GET);
+		  }
+		});
+	
+		inputElement.addEventListener('keydown', function(event) {
+		  if (event.key === 'Enter') {
+			httpRequestFun('enter', '', REQUEST_FLAG.GET);
+			console.log('Enter');
+		  }
+		});
+	</script>
+
+</body>
+
+</html>

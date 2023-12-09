@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>跨屏输入 关于</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="css/sider_menu.css" rel="stylesheet" type="text/css" media="all" />
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(45deg,#000df6, #7cff02);
+            background-attachment: fixed;
+        }
+        .container {
+            position: relative;
+            width: 1150px;
+            padding:20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .container .card {
+            position: relative;
+            width: 300px;
+            height: 480px;
+            background: #fff;
+            margin: 20px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 25px rgba(0, 0 ,0 , .2);
+            transition: 0.5s;
+        }
+        
+        .container .card .circle {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            clip-path: circle(180px at center 0);
+            text-align: center;
+        }
+        .container .card .circle{
+            color: #fff;
+            font-size: 4.5em;
+            padding: 30px 0;
+        }
+        h2{
+            color: #fff;
+            font-size: 0.5em;
+            padding: 15px 0;
+        }
+        h3{
+            color: #fff;
+            font-size: 0.5em;
+            padding: 15px 0;
+        }
+        .container .card .content {
+            position: absolute;
+            bottom: 10px;
+            padding: 20px;
+            text-align: center;
+        } 
+        .container .card .content p {
+            color: #666;
+        }
+        .container .card .content a {
+            position: relative;
+            display: inline-block;
+            padding: 10px 20px;
+            background: #000;
+            border-radius: 40px;
+            text-decoration: none;
+            margin-top: 20px;
+            color: #fff;
+        }
+        .container .card:nth-child(1) .circle,
+        .container .card:nth-child(1) .content a{
+            background: #a10eff;
+        }
+        .container .card:nth-child(2) .circle,
+        .container .card:nth-child(2) .content a{
+            background: rgb(206, 19, 19);
+        }
+        .container .card:nth-child(3) .circle,
+        .container .card:nth-child(3) .content a{
+            background: #0235ff;
+        }
+        .container .card:nth-child(4) .circle,
+        .container .card:nth-child(4) .content a{
+            background: #14c308;
+        }
+        .container .card:nth-child(5) .circle,
+        .container .card:nth-child(5) .content a{
+            background: #0270ff;
+        }
+
+        .main {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5em;
+        }
+        
+        .up {
+          display: flex;
+          flex-direction: row;
+          gap: 0.5em;
+        }
+        
+        .down {
+          display: flex;
+          flex-direction: row;
+          gap: 0.5em;
+        }
+        
+        .card1 {
+          width: 90px;
+          height: 90px;
+          outline: none;
+          border: none;
+          background: white;
+          border-radius: 90px 5px 5px 5px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+          transition: .2s ease-in-out;
+        }
+        
+        .github {
+          margin-top: 1.5em;
+          margin-left: 1.2em;
+          fill: #ffffff;
+        }
+        
+        .card2 {
+          width: 90px;
+          height: 90px;
+          outline: none;
+          border: none;
+          background: white;
+          border-radius: 5px 90px 5px 5px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+          transition: .2s ease-in-out;
+        }
+        
+        .douyin {
+          margin-top: 1.5em;
+          margin-left: -.9em;
+          fill: #ffffff;
+        }
+        
+        .card3 {
+          width: 90px;
+          height: 90px;
+          outline: none;
+          border: none;
+          background: white;
+          border-radius: 5px 5px 5px 90px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+          transition: .2s ease-in-out;
+        }
+        
+        .bilibili {
+          margin-top: -.6em;
+          margin-left: 1.2em;
+          fill: #ffffff;
+        }
+        
+        .card4 {
+          width: 90px;
+          height: 90px;
+          outline: none;
+          border: none;
+          background: white;
+          border-radius: 5px 5px 90px 5px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+          transition: .2s ease-in-out;
+        }
+        
+        .kuan {
+          margin-top: -.9em;
+          margin-left: -1.2em;
+          fill: #ffffff;
+        }
+        
+        .card1:hover {
+          cursor: pointer;
+          scale: 1.1;
+          background-color: #052afb;
+        }
+        
+        .card1:hover .github {
+          fill: rgb(255, 255, 255);
+        }
+        
+        .card2:hover {
+          cursor: pointer;
+          scale: 1.1;
+          background-color: #2EEFEB;
+        }
+        
+        .card2:hover .douyin {
+          fill: white;
+        }
+        
+        .card3:hover {
+          cursor: pointer;
+          scale: 1.1;
+          background-color: #EB5D85;
+        }
+        
+        .card3:hover .bilibili {
+          fill: white;
+        }
+        
+        .card4:hover {
+          cursor: pointer;
+          scale: 1.1;
+          background-color: #109D58;
+        }
+        
+        .card4:hover .kuan {
+          fill: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="menu">
+		<svg viewBox="0 0 1024 1024" width="30" height="30">
+			<path class="menu_btn_icon" d="M79.169331 113.350554l121.006899 0 0 120.557773-121.006899 0 0-120.557773ZM324.965581 113.350554l647.967334 0 0 120.557773-647.967334 0 0-120.557773ZM79.169331 444.549837l121.006899 0 0 120.557773-121.006899 0 0-120.557773ZM324.965581 444.549837l647.967334 0 0 120.557773-647.967334 0 0-120.557773ZM79.169331 754.840781l121.006899 0 0 120.334643-121.006899 0 0-120.334643ZM324.965581 754.840781l647.967334 0 0 120.334643-647.967334 0 0-120.334643Z"></path>
+		</svg>
+		<svg viewBox="0 0 1024 1024" width="30" height="30" style="display: none;">
+			<path class="menu_btn_icon" d="M1022.583467 127.803733 894.779733 0 511.291733 383.4624 127.8464 0 0 127.803733 383.496533 511.274667 0 894.737067 127.8464 1022.5408 511.291733 639.0784 894.779733 1022.5408 1022.583467 894.737067 639.138133 511.274667Z"></path>
+		</svg>
+    </div>
+
+    <div class="barra-lateral">
+        <div>
+            <div class="nombre-pagina">
+                <img src="images/app_icon.png" width="40px" height="40px"></img>
+                <span>跨屏输入</span>
+            </div>
+        </div>
+
+		<div>
+            <div class="modo-oscuro">
+                <div class="info">
+                    <span>夜间模式</span>
+                </div>
+                <div class="switch">
+                    <div class="base">
+                        <div class="circulo">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+			<div class="linea"></div>
+        </div>
+
+        <nav class="navegacion">
+            <ul>
+                <li>
+                    <a id="inbox" href="webui.html">
+						<svg viewBox="0 0 1024 1024" width="30" height="30">
+							<path d="M939.175079 484.343103 557.721321 107.755166c-1.927909-2.289136-5.950526-6.025227-11.568477-9.730619-10.06217-6.627954-20.757766-10.001795-31.783891-10.001795-11.855002 0-22.820752 3.40454-32.597419 10.092869-6.477528 4.458545-9.942443 8.465812-11.4334 10.454096L89.606831 484.373803c-6.522554 6.417153-10.107195 14.973016-10.107195 24.071232 0 9.06854 3.584642 17.624403 10.107195 24.041556 11.990079 11.900028 29.494755 8.495488 46.169529-7.92346l25.592888-25.306362 41.892109-40.08495 0 389.497968c0 48.143487 39.617299 87.308485 88.317465 87.308485l148.993382 0L440.572204 687.670975c0-19.160385 15.84692-34.736129 35.30918-34.736129l77.020164 0c19.47761 0 35.293831 15.575744 35.293831 34.736129l0 248.307296 149.008732 0c48.685839 0 88.332814-39.164998 88.332814-87.308485L825.536926 461.189777l67.484997 66.355267c11.508102 7.531534 21.842471 11.538801 30.217209 11.538801 6.236028 0 11.44875-2.169409 15.936971-6.598278 6.507204-6.417153 10.092869-14.94334 10.122545-24.041556C949.297624 499.346819 945.712983 490.789932 939.175079 484.343103z" fill="#05a7fb"></path>
+						</svg>
+                        <span>主界面</span>
+                    </a>
+                </li>
+                <li>
+                    <a id="inbox" href="about.html">
+						<svg viewBox="0 0 1024 1024" width="30" height="30">
+							<path d="M818.217 770.13c25.597-30.29 46.422-64.031 62.111-100.694 21.328-49.84 32.143-102.809 32.143-157.436 0-54.047-10.594-106.497-31.486-155.893-20.172-47.692-49.042-90.516-85.809-127.283s-79.591-65.637-127.283-85.809C618.497 122.123 566.047 111.529 512 111.529s-106.497 10.594-155.893 31.486c-47.692 20.172-90.517 49.042-127.283 85.809s-65.637 79.591-85.809 127.283C122.123 405.503 111.529 457.953 111.529 512s10.594 106.497 31.486 155.893c20.172 47.692 49.042 90.516 85.809 127.283 36.767 36.767 79.591 65.637 127.283 85.809 49.396 20.893 101.846 31.486 155.893 31.486h359.231a37.001 37.001 0 0 0 26.163-63.163l-79.177-79.178zM485.504 323.186l35.882-12c19.376-6.481 40.344 3.975 46.825 23.354 6.48 19.379-3.976 40.344-23.354 46.825l-35.882 12a36.96 36.96 0 0 1-11.74 1.92c-15.478 0-29.905-9.788-35.085-25.275-6.481-19.378 3.975-40.343 23.354-46.824z m86.615 149.795l-33.082 148.09c12.283 1.718 23.42 9.571 28.779 21.758 8.227 18.706-0.269 40.539-18.975 48.765l-45.479 20a36.974 36.974 0 0 1-14.889 3.131 37.003 37.003 0 0 1-36.116-45.067l33.023-147.827c-13.507-0.965-25.984-9.336-31.546-22.69-7.857-18.864 1.065-40.525 19.929-48.382l48.018-20a37 37 0 0 1 50.338 42.222z" fill="#0572f9"></path>
+						</svg>
+                        <span>关于</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+		<div class="usuario">
+			<img src="images/app_icon.png" alt="">
+			<div class="info-usuario">
+				<div class="nombre-email">
+					<span class="nombre"> 2023 © Bunny</span>
+					<span class="email">Version 2.0.0</span>
+				</div>
+				<ion-icon name="ellipsis-vertical-outline"></ion-icon>
+			</div>
+		</div>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <div class="circle">
+                <h2>软件简介</h2>
+            </div>
+            <div class="content">
+                <h4 style="font-size: 1.5em;">当前版本是Version 2.0.0</h4><br>
+                <p>跨屏输入是一款可以传输文字文本的打字辅助软件，<br></p>
+                <p>支持任何设备对Windows电脑的文本输入，<br></p>
+                <p>开发的目的是帮助不会电脑打字的人。<br></p><br>
+                <h4 style="font-size: 1.5em;">2023 © Bunny</h4>
+            </div>
+        </div>
+        <div class="card">
+            <div class="circle">
+                <h3>●免责声明●</h3>
+            </div>
+            <div class="content">
+                <p>本软件请用于日常的学习交流，请勿它用！！<br></p>
+                <p>如造成不良影响和损失，开发者不承担任何责任。<br></p>
+                <p style="color: red;">软件有时运行不稳定或者网络原因，会出现问题，请务必审核和确认电脑端接收的文本内容！！</p>
+            </div>
+        </div>
+        <div class="card">
+          <div class="circle">
+              <h3>联系开发者</h3>
+          </div>
+          <div class="content">
+              <div class="main" style="margin-left: 35px;">
+                  <div class="up">
+                    <button class="card1" onclick="window.location.href='http://www.github.com/bunny-chz'">
+                      <svg class="github" viewBox="0 0 1024 1024" width="30" height="30">
+                        <path d="M512 42.666667A464.64 464.64 0 0 0 42.666667 502.186667 460.373333 460.373333 0 0 0 363.52 938.666667c23.466667 4.266667 32-9.813333 32-22.186667v-78.08c-130.56 27.733333-158.293333-61.44-158.293333-61.44a122.026667 122.026667 0 0 0-52.053334-67.413333c-42.666667-28.16 3.413333-27.733333 3.413334-27.733334a98.56 98.56 0 0 1 71.68 47.36 101.12 101.12 0 0 0 136.533333 37.973334 99.413333 99.413333 0 0 1 29.866667-61.44c-104.106667-11.52-213.333333-50.773333-213.333334-226.986667a177.066667 177.066667 0 0 1 47.36-124.16 161.28 161.28 0 0 1 4.693334-121.173333s39.68-12.373333 128 46.933333a455.68 455.68 0 0 1 234.666666 0c89.6-59.306667 128-46.933333 128-46.933333a161.28 161.28 0 0 1 4.693334 121.173333A177.066667 177.066667 0 0 1 810.666667 477.866667c0 176.64-110.08 215.466667-213.333334 226.986666a106.666667 106.666667 0 0 1 32 85.333334v125.866666c0 14.933333 8.533333 26.88 32 22.186667A460.8 460.8 0 0 0 981.333333 502.186667 464.64 464.64 0 0 0 512 42.666667" fill="#231F20" p-id="5482">
+                      </svg>
+                    </button>
+                    <button class="card2" onclick="window.location.href='https://www.douyin.com/user/MS4wLjABAAAA3nlro4_Q4MM4VcJYYk1ezG8x8b0p7Un5WKKpqKcjGoQ'">
+                      <svg class="douyin" viewBox="0 0 1024 1024" width="30" height="30">
+                        <path d="M0 0m184.32 0l655.36 0q184.32 0 184.32 184.32l0 655.36q0 184.32-184.32 184.32l-655.36 0q-184.32 0-184.32-184.32l0-655.36q0-184.32 184.32-184.32Z" fill="#111111" p-id="4366"></path><path d="M204.27776 670.59712a246.25152 246.25152 0 0 1 245.97504-245.97504v147.57888a98.49856 98.49856 0 0 0-98.38592 98.38592c0 48.34304 26.14272 100.352 83.54816 100.352 3.81952 0 93.55264-0.88064 93.55264-77.19936V134.35904h157.26592a133.31456 133.31456 0 0 0 133.12 132.99712l-0.13312 147.31264a273.152 273.152 0 0 1-142.62272-38.912l-0.06144 317.98272c0 146.00192-124.24192 224.77824-241.14176 224.77824-131.74784 0.03072-231.1168-106.56768-231.1168-247.92064z" fill="#FF4040" p-id="4367"></path><path d="M164.92544 631.23456a246.25152 246.25152 0 0 1 245.97504-245.97504v147.57888a98.49856 98.49856 0 0 0-98.38592 98.38592c0 48.34304 26.14272 100.352 83.54816 100.352 3.81952 0 93.55264-0.88064 93.55264-77.19936V94.99648h157.26592a133.31456 133.31456 0 0 0 133.12 132.99712l-0.13312 147.31264a273.152 273.152 0 0 1-142.62272-38.912l-0.06144 317.98272c0 146.00192-124.24192 224.77824-241.14176 224.77824-131.74784 0.03072-231.1168-106.56768-231.1168-247.92064z" fill="#00F5FF" p-id="4368"></path><path d="M410.91072 427.58144c-158.8224 20.15232-284.44672 222.72-154.112 405.00224 120.40192 98.47808 373.68832 41.20576 380.70272-171.85792l-0.17408-324.1472a280.7296 280.7296 0 0 0 142.88896 38.62528V261.2224a144.98816 144.98816 0 0 1-72.8064-54.82496 135.23968 135.23968 0 0 1-54.70208-72.45824h-123.66848l-0.08192 561.41824c-0.11264 78.46912-130.9696 106.41408-164.18816 30.2592-83.18976-39.77216-64.37888-190.9248 46.31552-192.57344z"></path>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="down">
+                    <button class="card3" onclick="window.location.href='https://space.bilibili.com/388393889'">
+                      <svg class="bilibili" viewBox="0 0 1024 1024" width="30" height="30">
+                        <path d="M0 0m184.32 0l655.36 0q184.32 0 184.32 184.32l0 655.36q0 184.32-184.32 184.32l-655.36 0q-184.32 0-184.32-184.32l0-655.36q0-184.32 184.32-184.32Z" fill="#EC5D85" p-id="6481"></path><path d="M512 241.96096h52.224l65.06496-96.31744c49.63328-50.31936 89.64096 0.43008 63.85664 45.71136l-34.31424 51.5072c257.64864 5.02784 257.64864 43.008 257.64864 325.03808 0 325.94944 0 336.46592-404.48 336.46592S107.52 893.8496 107.52 567.90016c0-277.69856 0-318.80192 253.14304-324.95616l-39.43424-58.368c-31.26272-54.90688 37.33504-90.40896 64.68608-42.37312l60.416 99.80928c18.18624-0.0512 41.18528-0.0512 65.66912-0.0512z" fill="#EF85A7" p-id="6482"></path><path d="M512 338.5856c332.8 0 332.8 0 332.8 240.64s0 248.39168-332.8 248.39168-332.8-7.75168-332.8-248.39168 0-240.64 332.8-240.64z" fill="#EC5D85" p-id="6483"></path><path d="M281.6 558.08a30.72 30.72 0 0 1-27.47392-16.97792 30.72 30.72 0 0 1 13.73184-41.216l122.88-61.44a30.72 30.72 0 0 1 41.216 13.74208 30.72 30.72 0 0 1-13.74208 41.216l-122.88 61.44a30.59712 30.59712 0 0 1-13.73184 3.23584zM752.64 558.08a30.60736 30.60736 0 0 1-12.8512-2.83648l-133.12-61.44a30.72 30.72 0 0 1-15.04256-40.7552 30.72 30.72 0 0 1 40.76544-15.02208l133.12 61.44A30.72 30.72 0 0 1 752.64 558.08zM454.656 666.88a15.36 15.36 0 0 1-12.288-6.1952 15.36 15.36 0 0 1 3.072-21.49376l68.5056-50.91328 50.35008 52.62336a15.36 15.36 0 0 1-22.20032 21.23776l-31.5904-33.024-46.71488 34.72384a15.28832 15.28832 0 0 1-9.13408 3.04128z" fill="#EF85A7" p-id="6484"></path><path d="M65.536 369.31584c15.03232 101.90848 32.84992 147.17952 44.544 355.328 14.63296 2.18112 177.70496 10.04544 204.05248-74.62912a16.14848 16.14848 0 0 0 1.64864-10.87488c-30.60736-80.3328-169.216-60.416-169.216-60.416s-10.36288-146.50368-11.49952-238.83776zM362.25024 383.03744l34.816 303.17568h34.64192L405.23776 381.1328zM309.52448 536.28928h45.48608l16.09728 158.6176-31.82592 1.85344zM446.86336 542.98624h45.80352V705.3312h-33.87392zM296.6016 457.97376h21.39136l5.2736 58.99264-18.91328 2.26304zM326.99392 457.97376h21.39136l2.53952 55.808-17.408 1.61792zM470.62016 459.88864h19.456v62.27968h-19.456zM440.23808 459.88864h22.20032v62.27968h-16.62976z" fill="#FFFFFF" p-id="6485"></path><path d="M243.56864 645.51936a275.456 275.456 0 0 1-28.4672 23.74656 242.688 242.688 0 0 1-29.53216 17.52064 2.70336 2.70336 0 0 1-4.4032-1.95584 258.60096 258.60096 0 0 1-5.12-29.57312c-1.41312-12.1856-1.95584-25.68192-2.16064-36.36224 0-0.3072 0-2.5088 3.01056-1.90464a245.92384 245.92384 0 0 1 34.22208 9.5744 257.024 257.024 0 0 1 32.3584 15.17568c0.52224 0.256 2.51904 1.4848 0.09216 3.77856z" fill="#EB5480" p-id="6486"></path><path d="M513.29024 369.31584c15.03232 101.90848 32.84992 147.17952 44.544 355.328 14.63296 2.18112 177.70496 10.04544 204.05248-74.62912a16.14848 16.14848 0 0 0 1.64864-10.87488c-30.60736-80.3328-169.216-60.416-169.216-60.416s-10.36288-146.50368-11.49952-238.83776zM810.00448 383.03744l34.816 303.17568h34.64192L852.992 381.1328zM757.27872 536.28928h45.48608l16.09728 158.6176-31.82592 1.85344zM894.6176 542.98624h45.80352V705.3312H906.5472zM744.35584 457.97376h21.39136l5.2736 58.99264-18.91328 2.26304zM774.74816 457.97376h21.39136l2.53952 55.808-17.408 1.61792zM918.3744 459.88864h19.456v62.27968h-19.456zM887.99232 459.88864h22.20032v62.27968h-16.62976z" fill="#FFFFFF" p-id="6487"></path><path d="M691.32288 645.51936a275.456 275.456 0 0 1-28.4672 23.74656 242.688 242.688 0 0 1-29.53216 17.52064 2.70336 2.70336 0 0 1-4.4032-1.95584 258.60096 258.60096 0 0 1-5.12-29.57312c-1.41312-12.1856-1.95584-25.68192-2.16064-36.36224 0-0.3072 0-2.5088 3.01056-1.90464a245.92384 245.92384 0 0 1 34.22208 9.5744 257.024 257.024 0 0 1 32.3584 15.17568c0.52224 0.256 2.51904 1.4848 0.09216 3.77856z" fill="#EB5480" p-id="6488"></path>
+                      </svg>
+                    </button>
+                    <button class="card4" onclick="window.location.href='http://www.coolapk.com/u/2965372'">
+                      <img src="images/kuan.png" height=30px width=30px>
+                    </button>
+                  </div>
+              </div>
+          </div>
+      </div>
+        <div class="card">
+            <div class="circle">
+                <h2>微信打赏</h2>
+            </div>
+            <div class="content">
+                <img src="images/img_wechatpay.png" height=65% width=65% style="align-items: center;">
+                <br>
+                <p>如果您感觉好用，支持一下开发者。</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="circle">
+                <h3>支付宝打赏</h3>
+            </div>
+            <div class="content">
+                <img src="images/img_alipay.jpg" height=60% width=60% style="align-items: center;">
+                <br>
+                <p>如果您感觉好用，支持一下开发者。</p>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
